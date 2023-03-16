@@ -1,0 +1,27 @@
+
+[tool.poetry]
+name = "container"
+version = "1.0.5"
+description = "Varieties of Python dicts that also support dotted attribute access"
+authors = ["jrobbins-LiveData <jrobbins@livedata.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+flake8 = "*"
+pytest-cov = "*"
+pip-audit = "*"
+pyzstd = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "--cov=container tests"
+
+[[tool.poetry.source]]
+name = "ld"
+url = "https://livedata-601616385421.d.codeartifact.us-east-1.amazonaws.com/pypi/ld/simple/"
+default = true
